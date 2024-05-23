@@ -15,6 +15,7 @@ class InvoiceDetailController extends Controller
     function __construct()
     {
         
+    $this->middleware('auth');
     $this->middleware('permission:الاشعارات', ['only' => ['invoices_details']]);
     
     

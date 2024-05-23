@@ -25,7 +25,8 @@ class InvoiceController extends Controller
 
     function __construct()
     {
-    
+        
+    $this->middleware('auth');
     $this->middleware('permission:قائمة الفواتير', ['only' => ['index']]);
     $this->middleware('permission:الفواتير المدفوعة جزئيا', ['only' => ['partial']]);
     $this->middleware('permission:الفواتير المدفوعة', ['only' => ['paid']]);

@@ -12,6 +12,7 @@ class SectionController extends Controller
     function __construct()
 {
     
+$this->middleware('auth');
 $this->middleware('permission:الاقسام', ['only' => ['index']]);
 
 

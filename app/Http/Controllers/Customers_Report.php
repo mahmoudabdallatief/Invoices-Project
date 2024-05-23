@@ -9,7 +9,8 @@ class Customers_Report extends Controller
 {
   function __construct()
     {
-        
+      
+    $this->middleware('auth');  
     $this->middleware('permission:تقرير العملاء', ['only' => ['index']]);
     
     
